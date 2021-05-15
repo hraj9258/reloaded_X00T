@@ -18,6 +18,7 @@ cc_binary {
     name: "android.hardware.light@2.0-service.asus_sdm660",
     init_rc: ["android.hardware.light@2.0-service.asus_sdm660.rc"],
     vintf_fragments: ["android.hardware.light@2.0-service.asus_sdm660.xml"],
+    overrides: ["lights.qcom", "android.hardware.lights-service.qti"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
