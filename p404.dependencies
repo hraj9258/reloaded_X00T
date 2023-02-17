@@ -1,0 +1,42 @@
+[
+    {
+        "remote":       "p404-devices",
+        "repository":   "kernel_asus_sdm660",
+        "target_path":  "kernel/asus/sdm660",
+        "branch":       "tokui"
+    },
+    {
+        "remote":       "p404-devices",
+        "repository":   "vendor_asus",
+        "target_path":  "vendor/asus",
+        "branch":       "tokui"
+    },
+    {
+        "remote":       "p404-devices",
+        "repository":   "hardware_qcom_audio",
+        "target_path":  "vendor/qcom/opensource/audio-hal/primary-hal",
+        "branch":       "tokui-msm8998"
+    },
+    {
+        "remote":       "p404-devices",
+        "repository":   "hardware_qcom_display",
+        "target_path":  "hardware/qcom/display",
+        "branch":       "tokui-msm8998"
+    },
+    {   "remote":       "p404-devices",
+        "repository":   "hardware_qcom_media",
+        "target_path":  "hardware/qcom/media",
+        "branch":       "tokui-msm8998"
+    },
+    {   "remote":       "github",
+        "repository":   "ArrowOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "target_path":  "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+        "branch":       "arrow-13.0"
+    },
+    {   "remote":       "github",
+        "repository":   "ArrowOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9",
+        "target_path":  "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9",
+        "branch":       "arrow-13.0"
+    }
+]
+
