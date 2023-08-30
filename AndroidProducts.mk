@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/p404_X00T.mk
+    $(LOCAL_DIR)/X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    p404_X00T-eng \
-    p404_X00T-userdebug \
-    p404_X00T-user
+    X00T-eng \
+    X00T-userdebug \
+    X00T-user

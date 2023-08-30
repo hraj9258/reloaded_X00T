@@ -80,6 +80,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 HWUI_COMPILE_FOR_PERF := true
 
 # Kernel
+BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_CONFIG := X00TD_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom
@@ -99,6 +100,8 @@ TARGET_KERNEL_VERSION := 4.4
 KERNEL_SD_LLVM_SUPPORT := true
 TARGET_USES_UNCOMPRESSED_KERNEL := false
 TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_CLANG_VERSION := trb_clang
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/trb_clang
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
@@ -112,7 +115,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += NFC
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/configs/manifests/device_framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/configs/manifests/device_framework_compatibility_matrix.xml \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_sdm660
@@ -190,6 +194,9 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+
+# Inherit from ReloadedOS configuration
+include vendor/reloaded/config/BoardConfigReloaded.mk
 
 # Inherit the proprietary files
 include vendor/asus/X00T/BoardConfigVendor.mk

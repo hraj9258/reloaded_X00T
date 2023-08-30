@@ -93,3 +93,7 @@ media.wfd.max_resolution=5
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Reloaded Specific
+ro.reloaded.device_maintainer=Himanshu Raj
+ro.reloaded.device_maintainer_url=https://t.me/hraj9258
